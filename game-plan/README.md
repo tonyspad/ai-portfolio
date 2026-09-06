@@ -8,6 +8,13 @@ querying, offensive & defensive self-scouting, opponent scouting reports with ma
 prediction, and a Film Room built on real coaches film with a computer-vision pipeline that
 tracks and grades every player on every play.
 
+![Film Review — per-player CV tracking and VLM grading](screenshots/film-review.jpg)
+
+*The Film Review surface: real all-22 coaches film with per-player bounding boxes (position +
+jersey resolved by the CV pipeline) and, for every tracked player, a VLM-written evaluation of
+that rep — pre-snap alignment, technique, and play outcome, down to structured flags like route
+run, blitz pickups, and catch type.*
+
 ---
 
 ## 1 · Natural-language analytics — a compiler, not a chatbot

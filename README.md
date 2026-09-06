@@ -21,7 +21,7 @@ coaches film — detection, tracking, cross-camera association by field geometry
 identification, and VLM-graded per-player evaluations, all gated by calibrated QA before
 anything ships.
 
-[![Natural-language query](game-plan/screenshots/nl-query.png)](game-plan/)
+[![Film Review — per-player CV tracking and VLM grading over real coaches film](game-plan/screenshots/film-review.jpg)](game-plan/)
 
 **ML surface area:** schema-grounded NL→SQL compilation · LLM result analysis · YOLOv8 + SAM2
 detection/tracking · projective-geometry cross-angle matching · CNN position classifier trained
