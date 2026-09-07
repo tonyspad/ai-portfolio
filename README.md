@@ -12,6 +12,23 @@ right.
 
 ---
 
+## 🎲 [Gamblino](gamblino/) — social sports gaming
+
+A social sports gaming league for friends — points, not money — live in production at
+[gamblino.life](https://gamblino.life) with a real 29-player league. Weekly 16-point budgets
+against the spread, perfect-week and near-miss bonuses, playoff confidence pools, and a
+spreadsheet-homage design system. Its standout AI feature: league admins write scoring rules
+in plain English, an LLM compiles them into a whitelisted JSON DSL, and no rule runs until it
+passes a scenario test suite — after which a pure, deterministic engine executes it.
+
+<p align="center"><a href="gamblino/"><img src="gamblino/screenshots/betting-board.png" width="340" alt="Gamblino betting board" /></a></p>
+
+**ML surface area:** NL→DSL rule compilation with a generate-and-check loop · scenario-gated
+activation with frozen rule hashes · deterministic zero-dependency execution · historical
+replay to evaluate candidate rules against whole past seasons.
+
+---
+
 ## 🏈 [Game Plan](game-plan/) — NFL play-by-play intelligence platform
 
 Ask questions in plain English; an LLM compiles them to SQL; DuckDB-WASM executes them

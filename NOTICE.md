@@ -1,7 +1,7 @@
 # Proprietary Notice
 
-All projects described in this repository — **Game Plan**, **Sports-Bet**, and **War Room** — are
-closed-source, proprietary software.
+All projects described in this repository — **Gamblino**, **Game Plan**, **Sports-Bet**, and
+**War Room** — are closed-source, proprietary software.
 
 © 2024–2026 Anthony Spadafino. All rights reserved.
 
