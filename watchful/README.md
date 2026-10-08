@@ -5,7 +5,7 @@ better at your own work.**
 
 Install it by pasting one line; it works in the terminal, the desktop app, and VS Code. Coding agents
 leave a complete trace of every session on disk, and nobody reads it. Watchful does, read-only and
-on the developer's own laptop. Codex support comes next, in v1.5.
+on the developer's own laptop. Codex support comes next, in v1.5. Built in TypeScript on Node.js.
 
 ## Value propositions
 
@@ -89,7 +89,7 @@ override instead of lowering the bar for every future skill.
 
 ## Engineering notes
 
-- **Stack:** TypeScript CLI, shipped as a Claude Code plugin (SessionStart, PostToolUse, and Stop
+- **Stack:** TypeScript on Node.js, a CLI shipped as a Claude Code plugin (SessionStart, PostToolUse, and Stop
   hooks), a local web page server, and a transient worker that runs queued evals only after 2 idle
   minutes and yields within 10 seconds of new activity.
 - **Token-lean by design.** One ledger tracks every token Watchful spends, weighted by API price

@@ -51,7 +51,7 @@ that beat Claude without them; cuts token spend (about 64% of spend is context r
 by telling you when to compact, what a handoff should keep, and when to start fresh; cleans up stale
 or conflicting CLAUDE.md lines, memories, and unused skills; and, second, runs tripwires that can
 pause a risky action and alert you. Next: an always-on daemon that coaches live and watches every
-session at once.
+session at once. Built in TypeScript on Node.js.
 
 **ML surface area:** champion/challenger skill evals with 70/30 holdout splits · pre-registered
 verdicts with intervals · blinded pairwise LLM judge in both orders · blast-radius-gated
