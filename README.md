@@ -2,12 +2,12 @@
 
 **Contact:** anthony.spadafino@gmail.com
 
-Three production-grade sports-intelligence platforms I designed and built end-to-end. Each pairs
-a modern web stack with applied AI — LLM systems, computer vision, and classical ML — against
-real, messy sports data, with the evaluation discipline to know when the models are actually
-right.
+Five products I designed and built end to end: four sports-intelligence platforms and a monitor for
+AI coding agents. Each pairs a modern web stack with applied AI — LLM systems, computer vision, and
+classical ML — against real, messy data (betting markets, game film, coding-agent session traces), with the
+evaluation discipline to know when the models are actually right.
 
-> **Note:** the source code for all three projects is private and proprietary. This repository
+> **Note:** the source code for every project is private and proprietary. This repository
 > contains write-ups and screenshots only — see [NOTICE.md](NOTICE.md).
 
 ---
@@ -29,6 +29,36 @@ replay to evaluate candidate rules against whole past seasons.
 
 ---
 
+## 📈 [Sports-Bet](sports-bet/) — odds-movement analysis & ML signal detection
+
+A live market-microstructure study of sports betting lines: hourly odds snapshots across nine
+leagues, 40+ engineered movement features per game, per-sport statistical hypothesis testing
+(p-values and effect sizes, not vibes), and four model families trained per sport × target —
+validated exclusively by walk-forward backtesting so no model ever sees the future.
+
+**ML surface area:** time-series feature engineering · per-sport hypothesis tests · LogReg /
+Random Forest / GBM / XGBoost with cross-validated model selection and feature-importance
+reporting · walk-forward validation · confidence-scored live signals with post-hoc outcome
+grading · a KenPom-efficiency March Madness ATS predictor.
+
+---
+
+## 🔭 [Watchful](watchful/): a second opinion for coding agents
+
+A Claude Code plugin that reads your session transcripts and makes your coding agent cheaper and
+better at your own work. It writes skills from requests you keep repeating and keeps only the ones
+that beat Claude without them; cuts token spend (about 64% of spend is context re-read every turn)
+by telling you when to compact, what a handoff should keep, and when to start fresh; cleans up stale
+or conflicting CLAUDE.md lines, memories, and unused skills; and, second, runs tripwires that can
+pause a risky action and alert you. Next: an always-on daemon that coaches live and watches every
+session at once.
+
+**ML surface area:** champion/challenger skill evals with 70/30 holdout splits · pre-registered
+verdicts with intervals · blinded pairwise LLM judge in both orders · blast-radius-gated
+auto-promotion · price-weighted token ledger · zero-token mechanical tripwires over agent traces.
+
+---
+
 ## 🏈 [Game Plan](game-plan/) — NFL play-by-play intelligence platform
 
 Ask questions in plain English; an LLM compiles them to SQL; DuckDB-WASM executes them
@@ -44,20 +74,6 @@ anything ships.
 detection/tracking · projective-geometry cross-angle matching · CNN position classifier trained
 on a provenance-tracked human GT corpus · VLM action grading with deterministic QA gates ·
 golden-test evaluation harness for the LLM layer itself.
-
----
-
-## 📈 [Sports-Bet](sports-bet/) — odds-movement analysis & ML signal detection
-
-A live market-microstructure study of sports betting lines: hourly odds snapshots across nine
-leagues, 40+ engineered movement features per game, per-sport statistical hypothesis testing
-(p-values and effect sizes, not vibes), and four model families trained per sport × target —
-validated exclusively by walk-forward backtesting so no model ever sees the future.
-
-**ML surface area:** time-series feature engineering · per-sport hypothesis tests · LogReg /
-Random Forest / GBM / XGBoost with cross-validated model selection and feature-importance
-reporting · walk-forward validation · confidence-scored live signals with post-hoc outcome
-grading · a KenPom-efficiency March Madness ATS predictor.
 
 ---
 
@@ -80,7 +96,7 @@ cap math · a context-injected AI analyst grounded in the team's live financial 
 ## Shared engineering DNA
 
 - **Stack:** Next.js (App Router) · TypeScript (strict) · Tailwind · Zustand · Recharts · Python (FastAPI, pandas, scikit-learn, xgboost)
-- **AI:** Anthropic Claude APIs · Gemini VLM labeling · YOLOv8/SAM2 CV · Deepgram speech-to-text
+- **AI:** Anthropic Claude APIs · Claude Code plugins and hooks · Gemini VLM labeling · YOLOv8/SAM2 CV · Deepgram speech-to-text
 - **Data engineering:** DuckDB (WASM in-browser + node) · parquet pipelines · Azure SQL · Vercel Blob
 - **Evaluation culture:** tiered acceptance suites (unit → DB integration → LLM golden tests →
   E2E) · walk-forward backtests · QA gates calibrated against human-authored negative controls ·
