@@ -7,6 +7,12 @@ Install it by pasting one line; it works in the terminal, the desktop app, and V
 leave a complete trace of every session on disk, and nobody reads it. Watchful does, read-only and
 on the developer's own laptop. Codex support comes next, in v1.5. Built in TypeScript on Node.js.
 
+![Watchful scan: 30 days of the owner's sessions, spend, mistakes, and skills you should have](screenshots/scan.png)
+
+*The page Watchful opens after its first scan: 30 days of sessions, API-equivalent spend, cache
+hit rate, and the recurring requests worth turning into skills, built read-only with no model and
+no network.*
+
 ## Value propositions
 
 1. **Writes skills for you.** It spots requests you keep repeating and drafts a skill for each one.

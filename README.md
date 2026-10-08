@@ -53,6 +53,8 @@ or conflicting CLAUDE.md lines, memories, and unused skills; and, second, runs t
 pause a risky action and alert you. Next: an always-on daemon that coaches live and watches every
 session at once. Built in TypeScript on Node.js.
 
+[![Watchful scan: 30 days of agent sessions, spend, and skills you should have](watchful/screenshots/scan.png)](watchful/)
+
 **ML surface area:** champion/challenger skill evals with 70/30 holdout splits · pre-registered
 verdicts with intervals · blinded pairwise LLM judge in both orders · blast-radius-gated
 auto-promotion · price-weighted token ledger · zero-token mechanical tripwires over agent traces.
